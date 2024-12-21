@@ -1,0 +1,176 @@
+.navbar {
+  height: auto;
+  position: fixed;
+  top: 0;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #222;
+  color: #ffffff;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Heading Container */
+.heading-container {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.heading {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #43cf24;
+}
+
+/* Search Container */
+.search-container {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.Laptop-view{
+  display: flex;
+  justify-content: space-evenly;
+}
+/* Links Container */
+.links-container {
+  display: flex;
+  gap: 20px;
+}
+.mobile-menu-button{
+  display: none;
+}
+/* Individual Links */
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.link:hover {
+  background-color: #f51010;
+  color: #1e1e2f;
+}
+
+/* Mobile Menu Container */
+.mobile-menu {
+  position: absolute;
+  top: 10vh; /* Adjusted below the navbar */
+  right: 5%; /* Align to the right edge with some padding */
+  width: 50%; /* Full width with some margin */
+  background-color: #222; /* Same color as navbar */
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Spacing between menu items */
+}
+
+/* Individual Menu Items */
+.mobile-menu-item {
+  padding: 10px 15px;
+  background-color: white; /* Green for the button */
+  text-align: center;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+
+/* Mobile Views */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 15vh;
+    padding: 15px 10px;
+    justify-content: center;
+    align-items: stretch; /* Ensure elements span the full width */
+  }
+
+  .Laptop-view{
+    display: none;
+  }
+
+  .heading {
+    font-size: 1.7rem;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .search-container {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .links-container {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+    align-items: center; /* Center align links */
+  }
+
+  .link {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    text-align: center;
+    width: 90%; /* Links span most of the width */
+    background-color: #333; /* Provide better visual contrast */
+    border: 1px solid #444;
+  }
+
+  .link:hover {
+    background-color: #f51010;
+    color: #ffffff;
+    border-color: #f51010;
+  }
+
+  .mobile-menu {
+    width: 60%; /* Take more space on smaller screens */
+    top: 12vh; /* Slightly lower for better spacing */
+    right: 5%;
+    padding: 10px;
+  }
+
+  .mobile-menu-item {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    padding: 5px ;
+  }
+  .mobile-menu-button
+  {
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+  .links-container{
+    display: flex;
+    font-size: 1rem;
+    flex-direction:row;
+  }
+  .link{
+    width:40%;
+  }
+  
+}

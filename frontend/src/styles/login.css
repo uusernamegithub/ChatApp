@@ -1,0 +1,92 @@
+/* Main container for the login form */
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 50px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Login header styling */
+.login-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form container styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input field group container */
+.input-group {
+  margin-bottom: 15px;
+}
+
+/* Label for inputs */
+.input-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Styling for the input fields */
+.input-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Submit button styling */
+.login-button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin:7px;
+  width:100%;
+}
+
+/* Hover effect for the button */
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  /* Adjust login container width and padding */
+  .login-container {
+      width: 90%; /* Reduce width to fit smaller screens */
+      padding: 30px; /* Adjust padding */
+  }
+
+  /* Reduce font size of the header */
+  .login-header {
+      font-size: 1.5rem; /* Smaller font size for the header */
+  }
+
+  /* Adjust input field padding */
+  .input-field {
+      padding: 10px; /* Increase padding for better usability */
+  }
+
+  /* Make the button more touch-friendly */
+  .login-button {
+      padding: 12px; /* Larger padding for touch devices */
+      font-size: 1rem; /* Increase font size for readability */
+  }
+}

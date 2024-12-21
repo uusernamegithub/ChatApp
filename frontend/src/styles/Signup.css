@@ -1,0 +1,104 @@
+/* Container for the signup page */
+.signup-container {
+  position: absolute; /* Ensures the container is positioned relative to the viewport */
+  top: 50%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Adjusts the position to center the container */
+  width: 400px; /* Limits the width of the container */
+  padding: 50px; /* Adds spacing inside the container */
+  border: 1px solid #ddd; /* Adds a light border */
+  border-radius: 8px; /* Rounds the corners of the container */
+  background-color: #f9f9f9; /* Sets a light background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Header styling */
+.signup-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form container */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input group for each form element */
+.input-group {
+  margin-bottom: 15px;
+}
+
+/* Label styling */
+.signup-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Input field styling */
+.signup-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Submit button styling */
+.signup-button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Image preview container */
+.preview-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Image preview styling */
+.preview-image {
+  max-width: 100%;
+  max-height: 150px;
+  border-radius: 8px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  /* Adjust signup container for smaller screens */
+  .signup-container {
+      top:70%;
+      width: 90%; /* Reduce width to fit the screen */
+      padding: 30px; /* Adjust padding */
+  }
+
+  /* Adjust header font size */
+  .signup-header {
+      font-size: 1.5rem; /* Smaller font size for readability */
+  }
+
+  /* Adjust input field padding */
+  .signup-input {
+      padding: 10px; /* Larger padding for touch inputs */
+  }
+
+  /* Adjust button size for better usability */
+  .signup-button {
+      padding: 12px; /* Increase padding */
+      font-size: 1rem; /* Larger font size */
+  }
+
+  /* Adjust preview image size */
+  .preview-image {
+      max-height: 120px; /* Reduce max height */
+  }
+}

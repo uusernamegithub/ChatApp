@@ -1,0 +1,140 @@
+/* SearchComp.css */
+
+/* Container for the search component */
+.search-container {
+    position: relative;
+    margin: auto;
+  }
+  
+
+  /* Search input field styling */
+  .search-input {
+    width: 65%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  /* User list container */
+  .user-list {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #fff;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1007;
+    list-style: none; /* Removes the default bullet points */
+    margin: 0;        /* Removes any default margin */
+    padding: 0;
+  }
+  
+  /* Styling for each user card */
+  .user-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Hover effect for user cards */
+  .user-card:hover {
+    background-color: #e6f7ff;
+  }
+  
+  /* Styling for user image */
+  .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  /* Styling for the user's name */
+  .user-name {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  /* Styling for the user's email */
+  .user-email {
+    margin: 0;
+    color: #777;
+    font-size: 12px;
+  }
+  
+  /* Styling for no results message */
+  .no-results {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    padding: 10px;
+  }
+  /* Mobile Menu Container */
+.mobile-menu {
+  position: absolute;
+  top: 10vh; /* Adjusted below the navbar */
+  right: 5%; /* Align to the right edge with some padding */
+  width: 60%; /* Full width with some margin */
+  background-color: #222; /* Same color as navbar */
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  padding: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between menu items */
+}
+
+/* Individual Menu Items */
+.mobile-menu-item {
+  padding: 10px ;
+  /* background-color: #43cf24;  */
+  /* color: white; */
+  text-align: center;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect for Menu Items */
+.mobile-menu-item:hover {
+  background-color: #d4431b;
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+
+  
+  @media (max-width: 768px) {
+    .search-input{
+      width: 80%;
+      font-size: 1rem;
+      border-radius: 10px;
+      
+    }
+    .mobile-menu {
+      width: 90%; /* Take more space on smaller screens */
+      top: 12vh; /* Slightly lower for better spacing */
+      right: 5%;
+      padding: 10px;
+    }
+  
+    .mobile-menu-item {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+      padding: 8px 10px;
+    }
+  }

@@ -1,0 +1,219 @@
+   .chat-section {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f3f4f6; /* Light background for Telegram-like appearance */
+}
+
+.chat-header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  background-color: #0088cc; /* Telegram's header background color */
+  color: white;
+  padding: 0 20px;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.chat-details{
+  display:flex;
+}
+.details-section{
+  width:100%;
+}
+.chat-details h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.chat-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #d1d1d1;
+  word-wrap: break-word;
+}
+
+.messages-container {
+  overflow-y: auto;
+  padding: 15px 10px;
+  margin-bottom: 10vh;;
+  margin-top: 65px; /* To account for the fixed header */
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f4f6;
+}
+
+.message {
+  max-width: 60%; /* Reduced width for Telegram-style bubbles */
+  border-radius: 12px;
+  margin: 8px 0;
+  padding: 10px 15px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+.message {
+  max-width: 75%; /* Prevent messages from occupying the full width */
+  word-wrap: break-word; /* Handle wrapping of long words */
+  overflow-wrap: break-word; /* Modern support for word wrapping */
+  word-break: break-word; /* Backward compatibility */
+}
+
+.message.user-message {
+  background-color: #dcf8c6; /* User message bubble color */
+  margin-left: auto;
+  text-align: right;
+  border-top-right-radius: 0; /* Telegram-style sharp corner */
+}
+
+.message.other-message {
+  background-color: #ffffff; /* Receiver message bubble color */
+  margin-right: auto;
+  text-align: left;
+  border-top-left-radius: 0; /* Telegram-style sharp corner */
+}
+
+
+.message img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.message .sender-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0088cc; /* Telegram blue for sender name in group chats */
+}
+
+.message p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.message .timestamp {
+  font-size: 11px;
+  color: #888;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.input-container {
+  width: 100%;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  position: fixed;
+  bottom: 0;
+  padding: 10px 10px;
+  background-color: #ffffff;
+  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 9px;
+  width:50vw;
+  border-radius: 2px; /* Rounded input for Telegram style */
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-right: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #f7f8fa; /* Subtle gray background */
+}
+
+.input-container input:focus {
+  border-color: #0088cc; /* Focus color matching Telegram blue */
+}
+
+.input-container button {
+  padding: 12px 15px;
+  background-color: #0088cc; /* Telegram send button color */
+  color: #ffffff;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 15px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container button:hover {
+  background-color: #0077b3; /* Slightly darker blue on hover */
+}
+
+.input-container button:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+.error {
+  color: red;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.back-button {
+  display: block; /* Show back button on mobile */
+  background-color:transparent;
+  border: none;
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .input-container input {
+    flex: 1;
+    padding: 9px;
+    width:70%;
+    border-radius: 2px; /* Rounded input for Telegram style */
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-right: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f7f8fa; /* Subtle gray background */
+  }
+  .chat-header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top:19vh;
+    width: 100%;
+    height: 65px;
+    background-color: #0088cc; /* Telegram's header background color */
+    color: white;
+    padding: 0 20px;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  .details-section{
+    width:60%;
+  }
+  .messages-container{
+    /* overflow-y: auto; */
+    position: relative;
+    top:10vh;
+    bottom:15vh;
+    padding: 15px 10px;
+    margin-bottom: 10vh;;
+    margin-top: 65px; /* To account for the fixed header */
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f4f6;
+  }
+}

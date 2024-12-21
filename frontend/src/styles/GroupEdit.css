@@ -1,0 +1,84 @@
+.group-edit-button {
+    position: absolute; /* Position the button relative to the modal */
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .group-edit-modal {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    height: 'auto';
+    text-align: center;
+    z-index: 1005;
+  }
+  
+  .group-members,
+  .filtered-users {
+    margin-top: 10px;
+    max-height: 100px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .group-member-item,
+  .filtered-user-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .search-users-input,
+  .rename-group-input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .remove-user-button,
+  .rename-group-button,
+  .close-modal-button {
+    padding: 4px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .remove-user-button {
+    background-color: #ff3700;
+    color: white;
+  }
+  
+  .rename-group-button {
+    background-color: blue;
+    color: white;
+  }
+  
+  .close-modal-button {
+    background-color: #555;
+    color: white;
+    position: absolute; /* Position the button relative to the modal */
+    top: 10px; /* Adjust the distance from the top of the modal */
+    right: 10px; /* Adjust the distance from the right edge of the modal */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  

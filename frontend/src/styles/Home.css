@@ -1,0 +1,96 @@
+
+.Home{
+    height:100vh;
+    width:100vw;
+} 
+
+.home-container {
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin-top: 80px;
+    height: 100vh;
+  }
+  
+  /* Left chat list container */
+  .chat-list-container {
+    width: 35vw;
+    padding: 20px;
+    overflow-y: auto;
+    background-color:#222;
+    /* border-right: 1px solid #ccc; */
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+  }
+  
+  /* Each chat item */
+  .chat-item {
+    padding: 5px;
+    background-color: #cac3c3;
+    cursor: pointer;
+    margin-bottom: 1px;
+  }
+  
+  /* Styling for group chat background */
+  .group-chat {
+    background-color: #d8cbcb;
+  }
+  
+  /* Styling for individual user chat background */
+  .user-chat {
+    background-color: #d8d8e4;
+  }
+  
+  /* Chat title styling */
+  .chat-title {
+    margin: 0;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  
+  /* Styling for the last message section */
+  .last-message {
+    word-break: break-word;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Profile image in the chat */
+  .chat-user-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  /* Styling for the right section where the selected chat will be displayed */
+  .chat-section-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column; /* Stack sections vertically */
+      /* top:20vh; */
+    }
+  
+    .chat-list-container {
+      position:absolute;
+      width: 100%; /* Full width for chat list on mobile */
+      top:20vh;
+    }
+  
+    .chat-list-container.hidden {
+      display: none; /* Hide chat list when chat is selected */
+    }
+  
+    .chat-section-container {
+      width: 100%; /* Full width for chat section on mobile */
+    }
+  }
+  

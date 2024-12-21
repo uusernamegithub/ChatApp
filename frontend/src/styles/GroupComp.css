@@ -1,0 +1,183 @@
+.group-create-button {
+    margin: 15px;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.group-create-button:hover {
+    background-color: darkgreen;
+}
+
+.group-modal {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    z-index: 1005;
+}
+
+.group-name-input,
+.user-search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.group-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap; /* Wrap the columns on smaller screens */
+}
+
+.user-search-container,
+.group-users-container {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-bottom: 10px;
+}
+
+.filtered-user-list,
+.group-users-container {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.filtered-user-item,
+.group-user-item {
+    padding: 8px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    color: #555;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.filtered-user-item:hover,
+.group-user-item:hover {
+    background-color: #f0f0f0;
+}
+
+.create-group-button {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    color: white;
+    background-color: #00ff37;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-group-button:hover {
+    background-color: #00cc2d;
+}
+
+.close-modal-button {
+    background-color: #ff3700;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-modal-button:hover {
+    background-color: #cc2d00;
+}
+
+.no-users-found,
+.no-group-users {
+    color: #888;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Mobile View Styles */
+@media (max-width: 768px) {
+    .group-modal {
+        top: 50vh ;/* Center vertically */
+        transform: translate(-50%, -50%);
+        position: absolute;
+        width: 80%; /* Adjust modal width for smaller screens */
+        height: 80vh; /* Allow height to adjust dynamically */
+        padding: 10px;
+    }
+
+    .group-container {
+        flex-direction: column; /* Stack the containers vertically */
+        align-items: stretch; /* Full width for children */
+    }
+    .group-create-button{
+        padding: 8px;
+        background-color: white; /* Green for the button */
+        color:black;
+        text-align: center;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width:95%;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .group-name-input{
+        width: 90%;
+    }
+
+    .user-search-container,
+    .group-users-container {
+        width: 90%; /* Take full width on mobile */
+    }
+
+    .filtered-user-list,
+    .group-users-container {
+        height: 50px; /* Reduce height for smaller screens */
+    }
+
+    .create-group-button {
+        position: relative; /* Move to relative positioning */
+        bottom: 0;
+        left: 0;
+        transform: none; /* Remove translation for mobile layout */
+        width: 80%; /* Full-width button for better accessibility */
+        margin-top: 20px;
+    }
+
+    .close-modal-button {
+        width: 15%; /* Full-width button for better accessibility */
+        margin-top: 10px;
+    }
+
+    .filtered-user-item,
+    .group-user-item {
+        font-size: 12px; /* Smaller font size for mobile screens */
+        padding: 6px;
+    }
+}
