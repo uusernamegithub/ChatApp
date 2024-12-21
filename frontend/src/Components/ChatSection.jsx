@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/ChatSection.css";
 import GroupEdit from "./GroupEdit";
-import Lottie from "react-Lottie";
+import Lottie from "react-lottie";
 import animationData from "../TypingAnimation.json";
 
 
@@ -29,11 +29,11 @@ const ChatSection = ({ chatId, socket, handleBackClick }) => {
     if (!chatId) return;
 
     socket.emit("join chat", chatId);
-    (`Joined chat: ${chatId}`);
+    console.log(`Joined chat: ${chatId}`);
 
     return () => {
       socket.emit("leave chat", chatId);
-      (`Left chat: ${chatId}`);
+      console.log(`Left chat: ${chatId}`);
     };
   }, [chatId, socket]);
 
