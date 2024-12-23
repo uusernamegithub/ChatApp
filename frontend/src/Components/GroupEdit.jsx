@@ -13,7 +13,7 @@ export default function GroupEdit({ chatDetails,setChatDetails }) {
     const fetchUsers = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1:3256/chatApp/v1/users/allUsers",
+          "https://chat-appliacation.onrender.com/chatApp/v1/users/allUsers",
           {
             method: "GET",
             headers: {
@@ -39,7 +39,7 @@ export default function GroupEdit({ chatDetails,setChatDetails }) {
   const handleRemoveUser = async (userId) => {
     try {
       const response = await fetch(
-        "http://127.0.0.1:3256/chatApp/v1/chat/group/remove",
+        "https://chat-appliacation.onrender.com/chatApp/v1/chat/group/remove",
         {
           method: "PUT",
           headers: {
@@ -65,7 +65,7 @@ export default function GroupEdit({ chatDetails,setChatDetails }) {
   const handleAddToGroup = async (user) => {
     try {
       const response = await fetch(
-        "http://127.0.0.1:3256/chatApp/v1/chat/group/add",
+        "https://chat-appliacation.onrender.com/chatApp/v1/chat/group/add",
         {
           method: "PATCH",
           headers: {
@@ -92,7 +92,7 @@ export default function GroupEdit({ chatDetails,setChatDetails }) {
   const handleRenameGroup = async () => {
     try {
       const response = await fetch(
-        "http://127.0.0.1:3256/chatApp/v1/chat/group/rename",
+        "https://chat-appliacation.onrender.com/chatApp/v1/chat/group/rename",
         {
           method: "PATCH",
           headers: {
@@ -110,7 +110,7 @@ export default function GroupEdit({ chatDetails,setChatDetails }) {
       const result = await response.json();
       setChatDetails(chatDetails);
 
-      if (result.success) ("Group renamed successfully");
+      if (result.success) console.log("Group renamed successfully");
       else console.error("Error:", result.message);
     } catch (error) {
       console.error("Failed to send request:", error);

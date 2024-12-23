@@ -40,7 +40,7 @@ const ChatSection = ({ chatId, socket, handleBackClick }) => {
   // Fetch messages effect
   useEffect(() => {
     if (token) {
-      fetch(`http://127.0.0.1:3256/chatApp/v1/message/${chatId}`, {
+      fetch(`https://chat-appliacation.onrender.com/chatApp/v1/message/${chatId}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -76,7 +76,7 @@ const ChatSection = ({ chatId, socket, handleBackClick }) => {
     setIsLoading(true);
 
     if (token) {
-      fetch(`http://127.0.0.1:3256/chatApp/v1/message/`, {
+      fetch(`https://chat-appliacation.onrender.com/chatApp/v1/message/`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

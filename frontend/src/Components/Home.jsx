@@ -10,28 +10,28 @@ const Home = ({ selectedChatId, setSelectedChatId,selectedChatpic }) => {
   const userId = localStorage.getItem("userId");
   const [socket, setSocket] = useState(null);
 
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:3256";
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://chat-appliacation.onrender.com";
 
   useEffect(() => {
     const newSocket = io(API_BASE_URL, { transports: ["websocket"] });
     setSocket(newSocket);
 
     newSocket.on("connect", () => {
-      ("Connected to Socket.IO server");
+      console.log("Connected to Socket.IO server");
     });
 
     newSocket.on("disconnect", () => {
-      ("Socket.IO disconnected");
+      console.log("Socket.IO disconnected");
     });
 
     newSocket.emit('setup', userId);
     newSocket.on('connected', () => {
-      ('opened a user room in ' + userId);
+      console.log('opened a user room in ' + userId);
     });
 
     return () => {
       newSocket.disconnect();
-      ("Socket.IO disconnected");
+      console.log("Socket.IO disconnected");
     };
   }, [API_BASE_URL]);
 

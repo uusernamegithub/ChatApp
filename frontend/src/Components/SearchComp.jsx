@@ -5,14 +5,14 @@ const SearchComp = ({ selectedChatId, setSelectedChatId }) => {
   const [users, setUsers] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const token = localStorage.getItem("token"); // Retrieve token from localStorage
-  ('chatId' + selectedChatId);
+  console.log('chatId' + selectedChatId);
 
   useEffect(() => {
     // Fetch all users
     const fetchUsers = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1:3256/chatApp/v1/users/allUsers",
+          "https://chat-appliacation.onrender.com/chatApp/v1/users/allUsers",
           {
             method: "GET",
             headers: {
@@ -46,7 +46,7 @@ const SearchComp = ({ selectedChatId, setSelectedChatId }) => {
   const handleUserSelect = async (userId) => {
     try {
       const response = await fetch(
-        "http://127.0.0.1:3256/chatApp/v1/chat/",
+        "https://chat-appliacation.onrender.com/chatApp/v1/chat/",
         {
           method: "POST",
           headers: {
@@ -62,7 +62,7 @@ const SearchComp = ({ selectedChatId, setSelectedChatId }) => {
       }
 
       const data = await response.json();
-      ("Chat started successfully:", data);
+      console.log("Chat started successfully:", data);
       setSelectedChatId(data._id);
       setSearchQuery('');
       // setSelectedChatName(data.)

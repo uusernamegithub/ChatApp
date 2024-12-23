@@ -13,7 +13,7 @@ export default function CenteredDiv({ selectedChatId, setSelectedChatId }) {
         const fetchUsers = async () => {
             try {
                 const response = await fetch(
-                    "http://127.0.0.1:3256/chatApp/v1/users/allUsers",
+                    "https://chat-appliacation.onrender.com/chatApp/v1/users/allUsers",
                     {
                         method: "GET",
                         headers: {
@@ -48,7 +48,7 @@ export default function CenteredDiv({ selectedChatId, setSelectedChatId }) {
 
         try {
             const response = await fetch(
-                "http://127.0.0.1:3256/chatApp/v1/chat/group",
+                "https://chat-appliacation.onrender.com/chatApp/v1/chat/group",
                 {
                     method: "POST",
                     headers: {
