@@ -32,7 +32,7 @@ const SignupPage = ({setSelectedChatpic}) => {
   
     try {
       // Send a POST request to the backend
-      const response = await fetch('http://127.0.0.1:3256/chatApp/v1/users/signup', {
+      const response = await fetch('https://chat-appliacation.onrender.com/chatApp/v1/users/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
