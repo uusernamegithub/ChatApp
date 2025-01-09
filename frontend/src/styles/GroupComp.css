@@ -1,16 +1,17 @@
 .group-create-button {
     margin: 15px;
     padding: 10px 20px;
-    background-color: green;
+    background:none;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    background-color: rgb(28, 104, 209);
     transition: background-color 0.3s ease;
 }
 
 .group-create-button:hover {
-    background-color: darkgreen;
+    background-color: rgb(50, 118, 214);
 }
 
 .group-modal {
@@ -123,12 +124,12 @@
 /* Mobile View Styles */
 @media (max-width: 768px) {
     .group-modal {
-        top: 50vh ;/* Center vertically */
+        top: 25vh ;/* Center vertically */
         transform: translate(-50%, -50%);
         position: absolute;
-        width: 80%; /* Adjust modal width for smaller screens */
-        height: 80vh; /* Allow height to adjust dynamically */
-        padding: 10px;
+        width: 80vw; /* Adjust modal width for smaller screens */
+        height: 50vh; /* Allow height to adjust dynamically */
+        padding: 7px;
     }
 
     .group-container {
@@ -136,16 +137,9 @@
         align-items: stretch; /* Full width for children */
     }
     .group-create-button{
-        padding: 8px;
-        background-color: white; /* Green for the button */
-        color:black;
-        text-align: center;
+        width:90%;
         font-size: 1rem;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        width:95%;
-        transition: background-color 0.3s ease, transform 0.2s ease;
+
     }
     .group-name-input{
         width: 90%;
@@ -173,6 +167,7 @@
     .close-modal-button {
         width: 15%; /* Full-width button for better accessibility */
         margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .filtered-user-item,

@@ -20,6 +20,7 @@ const Navbar = ({ selectedChatId, setSelectedChatId,selectedChatpic }) => {
   return (
     <nav className="navbar">
       <div className="heading-container">
+        <img style={{width:'40px',height:'40px'}} src="../image.png"/>
         <h1 className="heading">ChatApplication</h1>
          {/* Mobile Menu Toggle Button */}
          {loggedin && <button
@@ -34,12 +35,12 @@ const Navbar = ({ selectedChatId, setSelectedChatId,selectedChatpic }) => {
       </div>
       {loggedin ? (
         <>
-          <div className="search-container">
+          {/* <div className="search-container">
             <SearchComp
               selectedChatId={selectedChatId}
               setSelectedChatId={setSelectedChatId}
             />
-          </div>
+          </div> */}
           <div className="Laptop-view">
             <div>
               <GroupComp
@@ -54,16 +55,19 @@ const Navbar = ({ selectedChatId, setSelectedChatId,selectedChatpic }) => {
           
           {/* Mobile Dropdown Menu */}
           {isMobileMenuOpen && (
-            <div className="mobile-menu">
-              <div>
+            <div className="navbar-mobile-menu">
+              <div className="mobile-menu-item">
                 <GroupComp
                   selectedChatId={selectedChatId}
                   setSelectedChatId={setSelectedChatId}
                 />
               </div>
-              <button onClick={handleLogout} className="mobile-menu-item">
-                Logout
-              </button>
+              <div className="mobile-menu-item">
+                  <button onClick={handleLogout} className="logout-mobile">
+                    Logout
+                  </button>
+              </div>
+              
             </div>
           )}
         </>
