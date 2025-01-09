@@ -76,7 +76,7 @@
 @media (max-width: 768px) {
   /* Adjust signup container for smaller screens */
   .signup-container {
-      top:70%;
+      top:50%;
       width: 90%; /* Reduce width to fit the screen */
       padding: 30px; /* Adjust padding */
   }

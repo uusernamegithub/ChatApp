@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../styles/Navbar.css";
 import SearchComp from "./SearchComp";
 import GroupComp from "./GroupComp";
+import imageSrc from '../image.png';
+
 
 const Navbar = ({ selectedChatId, setSelectedChatId,selectedChatpic }) => {
   const loggedin = JSON.parse(localStorage.getItem("loggedin"));
@@ -20,8 +22,12 @@ const Navbar = ({ selectedChatId, setSelectedChatId,selectedChatpic }) => {
   return (
     <nav className="navbar">
       <div className="heading-container">
-        <img style={{width:'40px',height:'40px'}} src="../image.png"/>
-        <h1 className="heading">ChatApplication</h1>
+      <img
+          style={{ width: '40px', height: '40px' }}
+          src={imageSrc}
+          alt="Descriptive text"
+        />
+      <h1 className="heading">ChatApplication</h1>
          {/* Mobile Menu Toggle Button */}
          {loggedin && <button
             className="mobile-menu-button"
